@@ -18,6 +18,15 @@ $ bun ./scripts/collect-nft-owners.coffee path/to/store.json
 
 It'll take some time as it collects large amounts of data from the blockchain. It uses some checkpoints to avoid loss in case of a crash, since public nodes can sometimes be unreliable.
 
+The store file you've given will contain a lot of data in different relations. You should query it with the `jq` CLI tool like so:
+
+```bash
+$ cat path/to/store.json | jq '.owners | keys'
+$ cat path/to/store.json | jq '.ownersByToken'
+```
+
+The former produces an array of all addresses that hold at least one NFT. Or you can simply further process the JSON yourself.
+
 # License
 The MIT License (MIT)
 

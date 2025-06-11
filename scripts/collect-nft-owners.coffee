@@ -30,7 +30,7 @@ if store.tokenIds.length is 0
   first = true
   while first or lastTokenId isnt undefined
     first = false
-    response = await CosmWasm.query.smart network, contract, CosmWasm.toBinary
+    response = await CosmWasm.query.smart network, contract,
       all_tokens:
         start_after: lastTokenId
         limit: 100
@@ -47,7 +47,7 @@ for tokenId in store.tokenIds
     console.log "Skipping #{tokenId} because it already has an owner"
     continue
   console.log "Collecting owner for #{tokenId}..."
-  { owner } = await CosmWasm.query.smart network, contract, CosmWasm.toBinary
+  { owner } = await CosmWasm.query.smart network, contract,
     owner_of:
       token_id: tokenId
   store.owners[owner] ?= []
