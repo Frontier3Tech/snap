@@ -5,12 +5,13 @@
     "@apophis-sdk/core": "^0.3.2",
     "@apophis-sdk/cosmos": "^0.3.2",
     "@apophis-sdk/cosmos-signers": "^0.3.3",
-    "@apophis-sdk/cosmwasm": "^0.3.2",
+    "@apophis-sdk/cosmwasm": "^0.3.4",
     "@kiruse/cosmos-components": "^0.1.9",
     "bun-coffeescript": "^1.0.3",
     "preact": "^10.26.6",
     "pug": "^3.0.3",
-    "yaml": "^2.7.1"
+    "yaml": "^2.7.1",
+    "yargs": "^18.0.0"
   },
   "devDependencies": {
     "@types/bun": "latest",
